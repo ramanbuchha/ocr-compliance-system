@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ComplianceStatus } from "@/components/results/ComplianceResultCard";
+// import { ComplianceStatus } from "@/components/results/ComplianceResultCard"; // removed to avoid type mismatch
 import { StatsCard } from "@/components/stats/StatsCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,9 +14,13 @@ import {
   FileText,
 } from "lucide-react";
 
+type FilterStatus = "all" | "pass" | "fail" | "warning";
+
 const Results = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [filterStatus, setFilterStatus] = useState<ComplianceStatus | "all">("all");
+  const [filterStatus, setFilterStatus] = useState<FilterStatus>("all");
+
+  const STATUSES: FilterStatus[] = ["all", "pass", "fail", "warning"];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -64,13 +68,13 @@ const Results = () => {
               <Input
                 placeholder="Search by filename or text..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => setSearchQuery((e.target as HTMLInputElement).value)}
                 className="pl-10"
               />
             </div>
 
             <div className="flex gap-2">
-              {(["all", "pass", "fail", "warning"] as const).map((status) => (
+              {STATUSES.map((status) => (
                 <Button
                   key={status}
                   variant={filterStatus === status ? "default" : "outline"}

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ScanText, Github, Twitter, Linkedin } from "lucide-react";
+
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center">
-                <ScanText className="w-5 h-5 text-primary-foreground" />
+               
               </div>
               <span className="font-display font-bold text-xl">
                 <span className="gradient-text">OCR</span>
