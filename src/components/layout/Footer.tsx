@@ -46,17 +46,17 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between mt-12 pt-8 border-t border-border/50">
           <p className="text-sm text-muted-foreground">
-            © 2025 OCRComply. All rights reserved.
+          
           </p>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-5 h-5" />
+             
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Twitter className="w-5 h-5" />
+               
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="w-5 h-5" />
+              
             </a>
           </div>
         </div>

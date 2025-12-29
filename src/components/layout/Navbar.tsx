@@ -84,9 +84,13 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="icon">
-              <Settings className="w-5 h-5" />
-            </Button>
+            {/* Settings -> go to /settings */}
+            <Link to="/settings">
+              <Button variant="ghost" size="icon" aria-label="Settings">
+                <Settings className="w-5 h-5" />
+              </Button>
+            </Link>
+
             <Button variant="hero" size="sm">
               Get Started
             </Button>
