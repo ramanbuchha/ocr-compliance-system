@@ -10,7 +10,6 @@ interface RuleCardProps {
   language: string;
   category: string;
   mandatory: boolean;
-  caseSensitive: boolean;
   isActive: boolean;
   onToggle?: () => void;
   onEdit?: () => void;
@@ -23,7 +22,6 @@ export function RuleCard({
   language,
   category,
   mandatory,
-  caseSensitive,
   isActive,
   onToggle,
   onEdit,
@@ -59,11 +57,11 @@ export function RuleCard({
             "font-medium",
             !isActive && "text-muted-foreground"
           )}>
-            "{text}"
+            -
           </p>
           
           <p className="text-xs text-muted-foreground mt-2">
-            {caseSensitive ? "Case-sensitive matching" : "Case-insensitive matching"}
+            Coming soon
           </p>
         </div>
         

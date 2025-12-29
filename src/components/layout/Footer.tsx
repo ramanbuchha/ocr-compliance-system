@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ScanText, Github, Twitter, Linkedin } from "lucide-react";
+
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center">
-                <ScanText className="w-5 h-5 text-primary-foreground" />
+               
               </div>
               <span className="font-display font-bold text-xl">
                 <span className="gradient-text">OCR</span>
@@ -46,17 +46,17 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between mt-12 pt-8 border-t border-border/50">
           <p className="text-sm text-muted-foreground">
-            © 2025 OCRComply. All rights reserved.
+          
           </p>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-5 h-5" />
+             
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Twitter className="w-5 h-5" />
+               
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="w-5 h-5" />
+              
             </a>
           </div>
         </div>
