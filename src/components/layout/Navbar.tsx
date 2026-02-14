@@ -91,9 +91,11 @@ export function Navbar() {
               </Button>
             </Link>
 
-            <Button variant="hero" size="sm">
-              Get Started
-            </Button>
+            <Link to="/login">
+              <Button variant="hero" size="sm">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -134,9 +136,11 @@ export function Navbar() {
                 );
               })}
               <div className="pt-2 mt-2 border-t border-border/50">
-                <Button variant="hero" className="w-full">
-                  Get Started
-                </Button>
+                <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="hero" className="w-full">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

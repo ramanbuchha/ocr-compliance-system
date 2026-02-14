@@ -99,7 +99,7 @@ const Index = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: '200ms' }}>
-                <Button variant="hero" size="xl">
+                <Button variant="hero" size="xl" onClick={() => navigate("/login")}>
                   <ScanText className="w-5 h-5" />
                   Start Scanning
                 </Button>
